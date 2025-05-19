@@ -1,0 +1,129 @@
+/* Navbar estilo DIESEL */
+.diesel-nav {
+  background: linear-gradient(145deg, #1a1a1a 0%, #000 100%);
+  padding: 1rem 2rem;
+  position: relative;
+  border-bottom: 2px solid #ff0000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diesel-mobile-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.diesel-menu-line {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.diesel-nav-buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+/* Estilo para los NavButtons (debes adaptar tu componente NavButton) */
+.diesel-nav-button {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.diesel-nav-button:hover {
+  color: #ff0000;
+}
+
+.diesel-nav-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ff0000;
+  transition: width 0.3s ease;
+}
+
+.diesel-nav-button:hover::after {
+  width: 100%;
+}
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+  .diesel-mobile-button {
+    display: block;
+  }
+  
+  .diesel-nav-buttons {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background: #000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    border-left: 3px solid #ff0000;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 90;
+  }
+  
+  .diesel-nav-buttons.diesel-visible {
+    transform: translateX(0);
+  }
+  
+  /* Animación del botón hamburguesa a X */
+  .diesel-visible + .diesel-mobile-button .diesel-menu-line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .diesel-visible + .diesel-mobile-button .diesel-menu-line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .diesel-visible + .diesel-mobile-button .diesel-menu-line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+/* Efecto de overlay para móvil */
+.diesel-nav-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 80;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.diesel-nav-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}

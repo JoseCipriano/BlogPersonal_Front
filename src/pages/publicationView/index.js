@@ -1,0 +1,1 @@
+export { PublicationsView } from './PublicationView.jsx'

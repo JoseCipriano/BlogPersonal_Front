@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+.diesel-container {
+  font-family: 'Rajdhani', sans-serif;
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.diesel-header {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+  padding: 2rem 1rem;
+  border-bottom: 3px solid #ff0000;
+  text-align: center;
+}
+
+.diesel-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  background: linear-gradient(to right, #fff, #ccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1.5rem;
+}
+
+.diesel-content {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.diesel-main {
+  flex: 3;
+}
+
+.diesel-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.diesel-card {
+  background: linear-gradient(145deg, #222 0%, #111 100%);
+  border: 1px solid #333;
+  border-radius: 0;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.diesel-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ff0000, #990000);
+}
+
+.diesel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+  border-color: #ff0000;
+}
+
+.diesel-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  margin: 0 0 1rem 0;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.diesel-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #aaa;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Estilo para las publicaciones (Content component) */
+.publication-card {
+  background: #111;
+  border-left: 3px solid #ff0000;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.publication-card:hover {
+  background: #1a1a1a;
+  transform: translateX(5px);
+}
+
+.publication-card h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 0;
+  letter-spacing: 1.5px;
+}
+
+.publication-card p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .diesel-content {
+    flex-direction: column;
+  }
+  
+  .diesel-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .diesel-title {
+    font-size: 2.5rem;
+  }
+  
+  .diesel-card {
+    padding: 1.5rem;
+  }
+  
+  .diesel-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .diesel-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .diesel-title {
+    font-size: 2rem;
+  }
+  
+  .diesel-content {
+    padding: 1rem;
+  }
+}

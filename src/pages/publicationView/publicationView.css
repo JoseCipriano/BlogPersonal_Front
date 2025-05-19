@@ -1,0 +1,287 @@
+body {
+  background-color: #000;
+  font-family: 'Rajdhani', sans-serif;
+  color: #fff;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Publication Card - Diesel Style */
+.blog-publication {
+  background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
+  padding: 2.5rem;
+  border-left: 5px solid #ff0000;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-publication:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 0, 0, 0.3);
+}
+
+.blog-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1.5rem;
+}
+
+.publication-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #ff0000;
+  object-fit: cover;
+}
+
+.publication-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.publication-user {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff0000;
+  margin-bottom: 0.3rem;
+}
+
+.publication-date {
+  font-size: 0.9rem;
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.publication-description {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.7;
+  margin-left: 5.5rem;
+}
+
+/* Comments Section - Diesel Style */
+.blog-comments {
+  padding: 2rem;
+  background: linear-gradient(145deg, #1a1a1a 0%, #111 100%);
+  border-left: 3px solid #ff0000;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.blog-comments-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.comment-count {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.blog-comments-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blog-comment {
+  display: flex;
+  gap: 1.5rem;
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 0;
+  border-left: 3px solid #ff0000;
+  transition: all 0.3s ease;
+}
+
+.blog-comment:hover {
+  background: #222;
+  transform: translateX(5px);
+}
+
+.blog-comment-header {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.blog-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ff0000;
+  object-fit: cover;
+}
+
+.blog-user {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff0000;
+}
+
+.blog-date {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.blog-comment-text {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-left: 4.2rem;
+}
+
+.no-comments {
+  color: #aaa;
+  text-align: center;
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* Buttons & Forms - Diesel Style */
+.btn-add-comment {
+  margin-bottom: 1.5rem;
+  background: linear-gradient(145deg, #ff0000 0%, #cc0000 100%);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-add-comment:hover {
+  background: linear-gradient(145deg, #cc0000 0%, #990000 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-left: 3px solid #ff0000;
+  margin-bottom: 2rem;
+}
+
+.form-input,
+.form-textarea {
+  padding: 1rem;
+  border-radius: 0;
+  border: 1px solid #333;
+  background: #111;
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #ff0000;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-submit {
+  background: linear-gradient(145deg, #ff0000 0%, #cc0000 100%);
+  color: #fff;
+  border: none;
+  padding: 1rem;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.form-submit:hover {
+  background: linear-gradient(145deg, #cc0000 0%, #990000 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #333;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-container {
+    padding: 1.5rem;
+  }
+  
+  .blog-publication {
+    padding: 1.5rem;
+  }
+  
+  .publication-title {
+    font-size: 2.2rem;
+  }
+  
+  .publication-description {
+    margin-left: 0;
+  }
+  
+  .blog-comment-text {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .publication-avatar {
+    width: 60px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,1 @@
+export { CoursePublication } from "./CoursePublication.jsx"
